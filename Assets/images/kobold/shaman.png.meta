@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c74a71e265efff7469d17636c4d9d46d
+guid: f2e383fd07e38dd428e791c40aa1c7f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2748573836790333939
-    second: pouler_0
+      213: 1144082875420812340
+    second: shaman_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pouler_0
+      name: shaman_0
       rect:
         serializedVersion: 2
-        x: 107
-        y: 8
-        width: 915
-        height: 1011
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0efd2378aa1bd9d0800000000000000
-      internalID: -2748573836790333939
+      spriteID: 434a017405990ef00800000000000000
+      internalID: 1144082875420812340
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pouler_0: -2748573836790333939
+      shaman_0: 1144082875420812340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

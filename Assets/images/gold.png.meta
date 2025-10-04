@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9fc904bf478b15840a4b324a72a52929
+guid: 06f34e9208812de469c7251544d93945
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5244484576605148495
-    second: Hearthstone-Warcraft-artwork-digital-art-cave-dungeon-underground-kobolds-Hearthstone-Kobolds-and-Catacombs-video-games-candles-dragon-treasure-1203358-2163541325_0
+      213: -6301429047446442448
+    second: gold_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hearthstone-Warcraft-artwork-digital-art-cave-dungeon-underground-kobolds-Hearthstone-Kobolds-and-Catacombs-video-games-candles-dragon-treasure-1203358-2163541325_0
+      name: gold_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 107
+        y: 8
+        width: 915
+        height: 1011
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f45909a9fe628c840800000000000000
-      internalID: 5244484576605148495
+      spriteID: 03e60a1faa3dc88a0800000000000000
+      internalID: -6301429047446442448
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hearthstone-Warcraft-artwork-digital-art-cave-dungeon-underground-kobolds-Hearthstone-Kobolds-and-Catacombs-video-games-candles-dragon-treasure-1203358-2163541325_0: 5244484576605148495
+      gold_0: -6301429047446442448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -30,8 +30,7 @@ public class FoodClick : MonoBehaviour, IPointerClickHandler
         lastClickTime = Time.time; // mémorise l’heure du clic
 
         // Ajoute la nourriture
-        if (gameManager != null) // Vérifie que la référence n'est pas nulle
-            gameManager.AddFood(); // Appelle la méthode pour ajouter de la nourriture
+        gameManager.AddFood(); // Appelle la méthode pour ajouter de la nourriture
 
         // Feedback visuel
         rectTransform.localScale = originalScale * scaleFactor; // Rétrécit l'image

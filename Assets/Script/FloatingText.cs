@@ -16,17 +16,16 @@ public class FloatingText : MonoBehaviour
 
     public void SetText(int amount, Color color)
     {
-        if (textMesh != null) // Vérifie que la référence n'est pas nulle
-        {
-            textMesh.text = "+" + amount; // Définit le texte
-            textMesh.color = color; //  Définit la couleur
+        
+         textMesh.text = "+" + amount; // Définit le texte
+         textMesh.color = color; //  Définit la couleur
 
-            // Fonction exponentielle douce : taille = base * 1.1^amount
-            float size = baseFontSize * Mathf.Pow(1.1f, amount);    // Calcule la taille
+         // Fonction exponentielle douce : taille = base * 1.1^amount
+         float size = baseFontSize * Mathf.Pow(2.0f, amount);    // Calcule la taille
 
-            // On limite pour éviter un texte qui explose
-            textMesh.fontSize = Mathf.Clamp(size, baseFontSize, maxFontSize);
-        }
+         // On limite pour éviter un texte qui explose
+         textMesh.fontSize = Mathf.Clamp(size, baseFontSize, maxFontSize);
+        
 
         Destroy(gameObject, lifetime);
     }
