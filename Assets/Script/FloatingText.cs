@@ -1,27 +1,27 @@
 using UnityEngine;
-using TMPro; // Assurez-vous d'avoir TextMeshPro dans votre projet
+using TMPro; 
 
 public class FloatingText : MonoBehaviour
 {
-    public float floatSpeed = 50f;   // vitesse de montée
-    public float lifetime = 1f;      // durée avant destruction
-    private TextMeshProUGUI textMesh;   // référence au composant TextMeshProUGUI
-    public int baseFontSize = 30;     // taille minimale
-    public int maxFontSize = 100;     // taille maximale
+    public float floatSpeed = 50f;   
+    public float lifetime = 1f;      
+    private TextMeshProUGUI textMesh;   
+    public int baseFontSize = 30;     
+    public int maxFontSize = 100;     
 
     void Awake()
     {
-        textMesh = GetComponent<TextMeshProUGUI>(); // Récupère le composant TextMeshProUGUI
+        textMesh = GetComponent<TextMeshProUGUI>(); 
     }
 
     public void SetText(int amount, Color color)
     {
         
-         textMesh.text = "+" + amount; // Définit le texte
-         textMesh.color = color; //  Définit la couleur
+         textMesh.text = "+" + amount; 
+         textMesh.color = color; 
 
-         // Fonction exponentielle douce : taille = base * 1.1^amount
-         float size = baseFontSize * Mathf.Pow(2.0f, amount);    // Calcule la taille
+         // Fonction exponentielle douce 
+         float size = baseFontSize * Mathf.Pow(2.0f, amount);    
 
          // On limite pour éviter un texte qui explose
          textMesh.fontSize = Mathf.Clamp(size, baseFontSize, maxFontSize);
@@ -33,7 +33,7 @@ public class FloatingText : MonoBehaviour
 
     void Update()
     {
-        // Fait monter le texte
+        
         transform.Translate(Vector3.up * floatSpeed * Time.deltaTime);
     }
 }

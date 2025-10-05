@@ -3,43 +3,37 @@ using UnityEngine.EventSystems;
 
 public class FoodClick : MonoBehaviour, IPointerClickHandler
 {
-    public GameManager gameManager;// Référence au GameManager pour ajouter de la nourriture
+    public GameManager gameManager;
 
-    private RectTransform rectTransform;//  Référence au RectTransform de l'image
+    private RectTransform rectTransform;
     private Vector3 originalScale;// Stocke la taille d'origine de l'image
-    public float scaleFactor = 0.8f;   // taille quand on clique
-    public float resetDelay = 0.05f;   // délai avant retour
-    public float clickCooldown = 1.0f;   // délai entre deux clics (1.5 secondes)
-    private float lastClickTime = Mathf.NegativeInfinity; // temps du dernier clic
+    public float scaleFactor = 0.8f;   
+    public float resetDelay = 0.05f;   
+    public float clickCooldown = 1.0f;   
+    private float lastClickTime = Mathf.NegativeInfinity; 
 
     private void Start()
     {
-        rectTransform = GetComponent<RectTransform>(); // Récupère le RectTransform de l'image
-        originalScale = rectTransform.localScale; // Mémorise la taille d'origine
+        rectTransform = GetComponent<RectTransform>(); 
+        originalScale = rectTransform.localScale; 
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Vérifie si le cooldown est écoulé
-        if (Time.time - lastClickTime < clickCooldown)
-        {
-            Debug.Log("Clic bloqué (cooldown actif)");
-            return;
-        }
 
-        lastClickTime = Time.time; // mémorise l’heure du clic
+        lastClickTime = Time.time; 
 
-        // Ajoute la nourriture
-        gameManager.AddFood(); // Appelle la méthode pour ajouter de la nourriture
+       
+        gameManager.AddFood(); 
 
         // Feedback visuel
-        rectTransform.localScale = originalScale * scaleFactor; // Rétrécit l'image
-        CancelInvoke(); // Annule tout Invoke en cours
-        Invoke(nameof(ResetScale), resetDelay); //  Restaure la taille après un court délai
+        rectTransform.localScale = originalScale * scaleFactor; 
+        CancelInvoke(); 
+        Invoke(nameof(ResetScale), resetDelay); 
     }
 
     private void ResetScale()
     {
-        rectTransform.localScale = originalScale; // Restaure la taille d'origine
+        rectTransform.localScale = originalScale; 
     }
 }

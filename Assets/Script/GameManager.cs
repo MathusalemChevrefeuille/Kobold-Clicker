@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         GameObject obj = Instantiate(floatingTextPrefab, canvas.transform); // crée le texte flottant
         obj.transform.position = Input.mousePosition;   //  positionne à la souris
 
-        var ft = obj.GetComponent<FloatingText>();  // récupère le script FloatingText
+        var ft = obj.GetComponent<FloatingText>();
         
         ft.SetText(amount,Color.green ); 
         
