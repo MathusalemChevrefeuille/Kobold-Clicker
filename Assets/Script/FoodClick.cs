@@ -27,8 +27,14 @@ public class FoodClick : MonoBehaviour, IPointerClickHandler
         gameManager.AddFood(); 
 
         // Feedback visuel
-        rectTransform.localScale = originalScale * scaleFactor; 
-        CancelInvoke(); 
+        rectTransform.localScale = originalScale * scaleFactor;
+        //  CancelInvoke() :
+        // Si le joueur clique très vite, plusieurs appels à ResetScale() pourraient être planifiés
+        // (un par clic). Cela ferait que l'image revienne à sa taille plusieurs fois, provoquant
+        // un effet de "tremblement" ou de décalage visuel.
+        // CancelInvoke() annule tous les appels en attente pour éviter les doublons,
+        // et on relance un seul Invoke propre juste après.
+        CancelInvoke(); //
         Invoke(nameof(ResetScale), resetDelay); 
     }
 
