@@ -1,92 +1,54 @@
-using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Ressources 
-    public int food = 0;       
-    public int gold = 0;       
-
-    // Kobolds 
-    public int totalKobolds = 0;   
-    public int idleKobolds = 0;    
-    public int koboldsMiner = 0;        
-    public int koboldsForager = 0;
-    public int koboldsShaman = 0;
-    public int koboldsScavenger = 0;             
-    public int koboldsHunter = 0;
-    public int koboldsRaider = 0;
-
-    // Paramètres des clicks 
-    public int foodPerClick = 1;           
-
-    private float lastClickTime = 0f;     // dernier clic mémorisé
-    //Floating text
-    public GameObject floatingTextPrefab; // assigne dans l’inspecteur
-    public Canvas canvas;                 // assigne ton Canvas ici
-
-    // Références UI
-    public TextMeshProUGUI foodText;
-    public TextMeshProUGUI goldText;
-    public TextMeshProUGUI koboldtotalText;
-    public TextMeshProUGUI koboldIdleText;
-    public TextMeshProUGUI koboldMinerText;
-    public TextMeshProUGUI koboldForagerText;
-    public TextMeshProUGUI koboldShamanText;
-    public TextMeshProUGUI koboldScavengerText;
-    public TextMeshProUGUI koboldHunterText;
-    public TextMeshProUGUI koboldRaiderText;
+    public int food = 0;
+    public int gold = 0;
+    public int baseFoodPerClick = 1;
+    public int foodPerClick = 1;
+    public float baseCoolDownClick = 1.5f;
+    public float CoolDownClick = 1.5f;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void AddFood() 
+
+
+    // Références vers les autres managers
+    public UIManager uiManager;
+    public KoboldManager koboldManager;
+
+    public GameObject floatingTextPrefab;
+    public Canvas canvas;
+
+    public void AddFoodClick()
     {
         food += foodPerClick;
-
+        uiManager.UpdateFoodDisplay(food);
         ShowFloatingText(foodPerClick);
-        UpdateUI();
+    }
+
+    public void AddFoodKobols(int amount)
+    {
+        food += amount;
+        uiManager.UpdateFoodDisplay(food);
     }
 
     public void AddGold(int amount)
     {
         gold += amount;
-        UpdateUI();
+        uiManager.UpdateGoldDisplay(gold);
     }
+
     private void ShowFloatingText(int amount)
     {
-       
-        GameObject obj = Instantiate(floatingTextPrefab, canvas.transform); // crée le texte flottant
-        obj.transform.position = Input.mousePosition;   //  positionne à la souris
+        GameObject obj = Instantiate(floatingTextPrefab, canvas.transform);
+        obj.transform.position = Input.mousePosition;
 
         var ft = obj.GetComponent<FloatingText>();
-        
-        ft.SetText(amount,Color.green ); 
-        
+        ft.SetText(amount, Color.green);
     }
 
-    private void UpdateUI()
+    private void Start()
     {
-        foodText.text = "" + food;
-        goldText.text = "" + gold;
-        koboldtotalText.text = totalKobolds.ToString();
-        koboldIdleText.text = idleKobolds.ToString();
-        koboldMinerText.text = koboldsMiner.ToString();
-        koboldForagerText.text = koboldsForager.ToString();
-        koboldShamanText.text = koboldsShaman.ToString();
-        koboldScavengerText.text = koboldsScavenger.ToString();
-        koboldHunterText.text = koboldsHunter.ToString();
-        koboldRaiderText.text = koboldsRaider.ToString();
+        uiManager.UpdateAllDisplays(food, gold, koboldManager);
     }
-
-    void Start()
-    {
-        UpdateUI();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    
 }
