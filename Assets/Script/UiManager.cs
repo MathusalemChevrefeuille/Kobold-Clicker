@@ -14,6 +14,12 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI koboldScavengerText;
     public TextMeshProUGUI koboldHunterText;
     public TextMeshProUGUI koboldRaiderText;
+    public TextMeshProUGUI koboldMinerTextUpgrade;
+    public TextMeshProUGUI koboldForagerTextUpgrade;
+    public TextMeshProUGUI koboldShamanTextUpgrade;
+    public TextMeshProUGUI koboldScavengerTextUpgrade;
+    public TextMeshProUGUI koboldHunterTextUpgrade;
+    public TextMeshProUGUI koboldRaiderTextUpgrade;
 
     public void UpdateFoodDisplay(int value) => foodText.text = value.ToString();
     public void UpdateGoldDisplay(int value) => goldText.text = value.ToString();
@@ -28,6 +34,14 @@ public class UIManager : MonoBehaviour
         koboldScavengerText.text = koboldManager.koboldsScavenger.ToString();
         koboldHunterText.text = koboldManager.koboldsHunter.ToString();
         koboldRaiderText.text = koboldManager.koboldsRaider.ToString();
+        koboldMinerTextUpgrade.text = koboldManager.koboldsMiner.ToString();
+        koboldForagerTextUpgrade.text = koboldManager.koboldsForager.ToString();
+        koboldShamanTextUpgrade.text = koboldManager.koboldsShaman.ToString();
+        koboldScavengerTextUpgrade.text = koboldManager.koboldsScavenger.ToString();
+        koboldHunterTextUpgrade.text = koboldManager.koboldsHunter.ToString();
+        koboldRaiderTextUpgrade.text = koboldManager.koboldsRaider.ToString();
+
+
     }
 
     public void UpdateAllDisplays(int food, int gold, KoboldManager koboldManager)

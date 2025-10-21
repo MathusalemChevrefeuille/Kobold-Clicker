@@ -18,7 +18,7 @@ public class KoboldManager : MonoBehaviour
 
     public int foodPerForager = 1;
     public int GoldPerMiner = 1;
-    public float shamanClickReducer = 0.03f;
+    public float shamanClickReducer = 0.05f;
     public int GoldperScavenger = 5;
     public int FoodperHunter = 5;
     public int FoodClickperHunter = 5;
@@ -29,7 +29,7 @@ public class KoboldManager : MonoBehaviour
     private float koboldCheckTimer = 0f;
 
     public int nextKoboldThreshold = 10; 
-    public float koboldThresholdMultiplier = 1.8f; 
+    public float koboldThresholdMultiplier = 1.5f; 
 
     public void UpdateTotalKobolds()
     {
@@ -76,13 +76,13 @@ public class KoboldManager : MonoBehaviour
     }
 
 
-    public void AssignForager()
+    public int AssignForager()
     {
         int foodCost = 0;
         int goldCost = 0;
 
-        if (idleKobolds <= 0) return;
-        if (gameManager.food < foodCost || gameManager.gold < goldCost) return;
+        if (idleKobolds <= 0) return 0;
+        if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
 
         gameManager.food -= foodCost;
         gameManager.gold -= goldCost;
@@ -91,24 +91,26 @@ public class KoboldManager : MonoBehaviour
         idleKobolds--;
 
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 2;
     }
 
-    public void UnassignForager()
+    public int UnassignForager()
     {
-        if (koboldsForager <= 0) return;
+        if (koboldsForager <= 0) return 0;
 
         koboldsForager -= 1;
         idleKobolds += 1;
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 1;
     }
 
-    public void AssignMiner()
+    public int AssignMiner()
     {
         int foodCost = 20;
         int goldCost = 0;
 
-        if (idleKobolds <= 0) return;
-        if (gameManager.food < foodCost || gameManager.gold < goldCost) return;
+        if (idleKobolds <= 0) return 0;
+        if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
 
         gameManager.food -= foodCost;
         gameManager.gold -= goldCost;
@@ -117,24 +119,26 @@ public class KoboldManager : MonoBehaviour
         idleKobolds--;
 
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 2;
     }
 
-    public void UnassignMiner()
+    public int UnassignMiner()
     {
-        if (koboldsForager <= 0) return;
+        if (koboldsMiner <= 0) return 0;
 
         koboldsMiner -= 1;
         idleKobolds += 1;
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 1;
     }
 
-    public void AssignShaman()
+    public int AssignShaman()
     {
         int foodCost = 20;
         int goldCost = 20;
 
-        if (idleKobolds <= 0) return;
-        if (gameManager.food < foodCost || gameManager.gold < goldCost) return;
+        if (idleKobolds <= 0) return 0;
+        if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
 
         gameManager.food -= foodCost;
         gameManager.gold -= goldCost;
@@ -143,24 +147,26 @@ public class KoboldManager : MonoBehaviour
         idleKobolds--;
 
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 2;
     }
 
-    public void UnassignShaman()
+    public int UnassignShaman()
     {
-        if (koboldsForager <= 0) return;
+        if (koboldsShaman <= 0) return 0;
 
         koboldsShaman -= 1;
         idleKobolds += 1;
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 1;
     }
 
-    public void AssignScavenger()
+    public int AssignScavenger()
     {
         int foodCost = 20;
         int goldCost = 0;
 
-        if (idleKobolds <= 0) return;
-        if (gameManager.food < foodCost || gameManager.gold < goldCost) return;
+        if (idleKobolds <= 0) return 0;
+        if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
 
         gameManager.food -= foodCost;
         gameManager.gold -= goldCost;
@@ -169,24 +175,26 @@ public class KoboldManager : MonoBehaviour
         idleKobolds--;
 
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 2;
     }
 
-    public void UnassignScavenger()
+    public int UnassignScavenger()
     {
-        if (koboldsForager <= 0) return;
+        if (koboldsScavenger <= 0) return 0;
 
         koboldsScavenger -= 1;
         idleKobolds += 1;
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 1;
     }
 
-    public void AssignHunter()
+    public int AssignHunter()
     {
         int foodCost = 0;
         int goldCost = 30;
 
-        if (idleKobolds <= 0) return;
-        if (gameManager.food < foodCost || gameManager.gold < goldCost) return;
+        if (idleKobolds <= 0) return 0;
+        if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
 
         gameManager.food -= foodCost;
         gameManager.gold -= goldCost;
@@ -195,25 +203,27 @@ public class KoboldManager : MonoBehaviour
         idleKobolds--;
 
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 2;
     }
 
-    public void UnassignHunter()
+    public int UnassignHunter()
     {
-        if (koboldsForager <= 0) return;
+        if (koboldsHunter <= 0) return 0;
 
         koboldsHunter -= 1;
         idleKobolds += 1;
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 1;
     }
 
 
-    public void AssignRaider()
+    public int AssignRaider()
     {
         int foodCost = 30;
         int goldCost = 0;
 
-        if (idleKobolds <= 0) return;
-        if (gameManager.food < foodCost || gameManager.gold < goldCost) return;
+        if (idleKobolds <= 0) return 0;
+        if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
 
         gameManager.food -= foodCost;
         gameManager.gold -= goldCost;
@@ -222,15 +232,18 @@ public class KoboldManager : MonoBehaviour
         idleKobolds--;
 
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 2;
     }
 
-    public void UnassignRaider()
+    public int UnassignRaider()
     {
-        if (koboldsForager <= 0) return;
+        if (koboldsRaider <= 0) return 0;
 
         koboldsRaider -= 1;
         idleKobolds += 1;
         gameManager.uiManager.UpdateAllDisplays(gameManager.food, gameManager.gold, this);
+        return 1;
+
     }
 
     private void Update()

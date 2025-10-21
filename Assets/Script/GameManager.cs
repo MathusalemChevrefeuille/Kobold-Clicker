@@ -6,13 +6,12 @@ public class GameManager : MonoBehaviour
     public int gold = 0;
     public int baseFoodPerClick = 1;
     public int foodPerClick = 1;
-    public float baseCoolDownClick = 1.5f;
-    public float CoolDownClick = 1.5f;
+    public float baseCoolDownClick = 1f;
+    public float CoolDownClick = 1f;
 
 
 
 
-    // Références vers les autres managers
     public UIManager uiManager;
     public KoboldManager koboldManager;
 
