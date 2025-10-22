@@ -23,7 +23,7 @@ public class UpgradeMenuManager : MonoBehaviour
     public void ShowFeedback(string message, Color color)
     {
         GameObject obj = Instantiate(feedbackPrefab, feedbackParent);
-        obj.transform.position = Input.mousePosition; // pop à la souris
+        obj.transform.position = Input.mousePosition;
 
         var fb = obj.GetComponent<FloatingFeedback>();
         fb.SetText(message, color);
@@ -46,12 +46,12 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0) 
             {
-            ShowFeedback("Aucun kobold disponible !", Color.red);
+            ShowFeedback("Aucun kobold disponible !", Color.white);
             return; 
             }
         else if (result == 1)
         {
-            ShowFeedback("Pas assez de ressources !", Color.red);
+            ShowFeedback("Pas assez de ressources !", Color.white);
             return;
         }
         else if (result == 2)
@@ -66,7 +66,7 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun Kobold à retirer !", Color.red);
+            ShowFeedback("Aucun Kobold à retirer !", Color.white);
             return;
         }
         else if (result == 1)
@@ -81,12 +81,12 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun kobold disponible !", Color.red);
+            ShowFeedback("Aucun kobold disponible !", Color.white);
             return;
         }
         else if (result == 1)
         {
-            ShowFeedback("Pas assez de ressources !", Color.red);
+            ShowFeedback("Pas assez de ressources !", Color.white);
             return;
         }
         else if (result == 2)
@@ -101,7 +101,7 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun Kobold à retirer !", Color.red);
+            ShowFeedback("Aucun Kobold à retirer !", Color.white);
             return;
         }
         else if (result == 1)
@@ -115,12 +115,12 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun kobold disponible !", Color.red);
+            ShowFeedback("Aucun kobold disponible !", Color.white);
             return;
         }
         else if (result == 1)
         {
-            ShowFeedback("Pas assez de ressources !", Color.red);
+            ShowFeedback("Pas assez de ressources !", Color.white);
             return;
         }
         else if (result == 2)
@@ -135,7 +135,7 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun Kobold à retirer !", Color.red);
+            ShowFeedback("Aucun Kobold à retirer !", Color.white);
             return;
         }
         else if (result == 1)
@@ -149,12 +149,12 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun kobold disponible !", Color.red);
+            ShowFeedback("Aucun kobold disponible !", Color.white);
             return;
         }
         else if (result == 1)
         {
-            ShowFeedback("Pas assez de ressources !", Color.red);
+            ShowFeedback("Pas assez de ressources !", Color.white);
             return;
         }
         else if (result == 2)
@@ -169,7 +169,7 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun Kobold à retirer !", Color.red);
+            ShowFeedback("Aucun Kobold à retirer !", Color.white);
             return;
         }
         else if (result == 1)
@@ -183,12 +183,12 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun kobold disponible !", Color.red);
+            ShowFeedback("Aucun kobold disponible !", Color.white);
             return;
         }
         else if (result == 1)
         {
-            ShowFeedback("Pas assez de ressources !", Color.red);
+            ShowFeedback("Pas assez de ressources !", Color.white);
             return;
         }
         else if (result == 2)
@@ -203,7 +203,7 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun Kobold à retirer !", Color.red);
+            ShowFeedback("Aucun Kobold à retirer !", Color.white);
             return;
         }
         else if (result == 1)
@@ -217,12 +217,12 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun kobold disponible !", Color.red);
+            ShowFeedback("Aucun kobold disponible !", Color.white);
             return;
         }
         else if (result == 1)
         {
-            ShowFeedback("Pas assez de ressources !", Color.red);
+            ShowFeedback("Pas assez de ressources !", Color.white);
             return;
         }
         else if (result == 2)
@@ -237,7 +237,7 @@ public class UpgradeMenuManager : MonoBehaviour
 
         if (result == 0)
         {
-            ShowFeedback("Aucun Kobold à retirer !", Color.red);
+            ShowFeedback("Aucun Kobold à retirer !", Color.white);
             return;
         }
         else if (result == 1)

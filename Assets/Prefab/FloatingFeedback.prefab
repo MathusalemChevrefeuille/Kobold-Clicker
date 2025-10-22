@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9115291191453136096}
   - component: {fileID: 3261457507596569316}
   - component: {fileID: 4649377794833394748}
+  - component: {fileID: -5523337205573810302}
   m_Layer: 5
   m_Name: FloatingFeedback
   m_TagString: Untagged
@@ -151,3 +152,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FloatingFeedback
   floatSpeed: 50
   lifetime: 1.5
+--- !u!114 &-5523337205573810302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4605328488389381510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
