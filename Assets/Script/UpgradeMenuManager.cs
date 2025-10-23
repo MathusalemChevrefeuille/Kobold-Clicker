@@ -19,6 +19,7 @@ public class UpgradeMenuManager : MonoBehaviour
     public GameObject feedbackPrefab;   
     public Transform feedbackParent;
 
+    public KoboldFlavorText koboldFlavorText;
 
     public void ShowFeedback(string message, Color color)
     {
@@ -38,6 +39,7 @@ public class UpgradeMenuManager : MonoBehaviour
     {
         isOpen = !isOpen;
         panel.SetActive(isOpen);
+        koboldFlavorText.ShowRandomFact();
     }
 
     public void AddForager()
