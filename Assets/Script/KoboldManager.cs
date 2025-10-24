@@ -25,11 +25,31 @@ public class KoboldManager : MonoBehaviour
     public int GoldperRaider = 5;
 
 
+    public int costForagerFood = 0;
+    public int costForagerGold = 0;
+
+    public int costMinerFood = 20;
+    public int costMinerGold = 0;
+
+    public int costShamanFood = 20;
+    public int costShamanGold = 20;
+
+    public int costScavengerFood = 20;
+    public int costScavengerGold = 0;
+
+    public int costHunterFood = 0;
+    public int costHunterGold = 30;
+
+    public int costRaiderFood = 30;
+    public int costRaiderGold = 0;
+
+
+
     public float koboldCheckInterval = 0.5f; 
     private float koboldCheckTimer = 0f;
 
-    public int nextKoboldThreshold = 10; 
-    public float koboldThresholdMultiplier = 1.5f; 
+    public int nextKoboldThreshold = 5; 
+    public float koboldThresholdMultiplier = 1.2f; 
 
     public void UpdateTotalKobolds()
     {
@@ -78,8 +98,8 @@ public class KoboldManager : MonoBehaviour
 
     public int AssignForager()
     {
-        int foodCost = 0;
-        int goldCost = 0;
+        int foodCost = costForagerFood;
+        int goldCost = costForagerGold;
 
         if (idleKobolds <= 0) return 0;
         if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
@@ -106,8 +126,8 @@ public class KoboldManager : MonoBehaviour
 
     public int AssignMiner()
     {
-        int foodCost = 20;
-        int goldCost = 0;
+        int foodCost = costMinerFood;
+        int goldCost = costMinerGold;
 
         if (idleKobolds <= 0) return 0;
         if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
@@ -134,8 +154,8 @@ public class KoboldManager : MonoBehaviour
 
     public int AssignShaman()
     {
-        int foodCost = 20;
-        int goldCost = 20;
+        int foodCost = costShamanFood;
+        int goldCost = costShamanGold;
 
         if (idleKobolds <= 0) return 0;
         if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
@@ -162,8 +182,8 @@ public class KoboldManager : MonoBehaviour
 
     public int AssignScavenger()
     {
-        int foodCost = 20;
-        int goldCost = 0;
+        int foodCost = costScavengerFood;
+        int goldCost = costScavengerGold;
 
         if (idleKobolds <= 0) return 0;
         if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
@@ -190,8 +210,8 @@ public class KoboldManager : MonoBehaviour
 
     public int AssignHunter()
     {
-        int foodCost = 0;
-        int goldCost = 30;
+        int foodCost = costHunterFood;
+        int goldCost = costHunterGold;
 
         if (idleKobolds <= 0) return 0;
         if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;
@@ -219,8 +239,8 @@ public class KoboldManager : MonoBehaviour
 
     public int AssignRaider()
     {
-        int foodCost = 30;
-        int goldCost = 0;
+        int foodCost = costRaiderFood;
+        int goldCost = costRaiderGold;
 
         if (idleKobolds <= 0) return 0;
         if (gameManager.food < foodCost || gameManager.gold < goldCost) return 1;

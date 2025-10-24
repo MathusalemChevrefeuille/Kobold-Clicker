@@ -26,7 +26,7 @@ public class KoboldFlavorText : MonoBehaviour
     {
         flavorTexts = new string[]
         {
-            "Le saviez-vous ? Dans AD&D 2e édition, un kobold avait ½ dé de vie. Oui, c’est littéralement possible de mourir en éternuant trop fort.",
+            "Le saviez-vous ? Dans AD&D, un kobold avait ½ dé de vie. Oui, c’est littéralement possible de le tuer en éternuant trop fort.",
             "Fait amusant : les kobolds étaient considérés comme des “gobelins faibles”, jusqu’à ce qu’un designer décide qu’ils méritaient un culte draconique… et des frondes.",
             "Détail oublié : dans la version de 1977, les kobolds étaient roux et poilus. Oui, avant de devenir reptiliens, c’étaient des mini-gobelins punk.",
             "Fait historique : le mot “kobold” vient du vieil allemand pour “esprit de mine”. Donc même dans D&D, ils respectent la tradition syndicale.",
