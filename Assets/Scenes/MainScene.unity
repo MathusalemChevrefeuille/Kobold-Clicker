@@ -491,8 +491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6aaf678f88eb6449157fb951b6e92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: 500
-  gold: 500
+  food: 1000
+  gold: 1000
   baseFoodPerClick: 1
   foodPerClick: 1
   baseCoolDownClick: 1
@@ -502,7 +502,7 @@ MonoBehaviour:
   floatingTextPrefab: {fileID: 835363430854275719, guid: 5d2fd4f3170290d459e1dc52093c4992, type: 3}
   canvas: {fileID: 430799602}
   endScreen: {fileID: 393836743}
-  victoryThreshold: 1000
+  victoryThreshold: 2500
   musicSource: {fileID: 857760530}
   backgroundMusic: {fileID: 8300000, guid: dd3a56fcc105b8f499b816c675308c90, type: 3}
 --- !u!1 &38323186
@@ -12983,7 +12983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.02826, y: 211.13696}
+  m_AnchoredPosition: {x: -60.02832, y: 211.13696}
   m_SizeDelta: {x: -1113.6, y: -776.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746746114
@@ -13068,7 +13068,7 @@ MonoBehaviour:
   raiderUI: {fileID: 594611454}
   tier2Threshold: 200
   tier3Threshold: 400
-  finalThreshold: 1000
+  finalThreshold: 2500
   tier2Unlocked: 0
   tier3Unlocked: 0
   gameCompleted: 0

@@ -27,7 +27,7 @@ public class TutorialManager : MonoBehaviour
 
         if (!tier2Shown && unlockManager.tier2Unlocked)
         {
-            ShowText("De nouveaux rôles sont disponibles ! Découvre les Chamans et Recupérateurs !");
+            ShowText("De nouveaux rôles sont disponibles ! Découvre les Chamans et Charognards !");
             tier2Shown = true;
         }
 

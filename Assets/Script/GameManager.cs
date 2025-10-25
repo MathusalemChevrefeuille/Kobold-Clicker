@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject floatingTextPrefab;
     public Canvas canvas;
     public GameObject endScreen;
-    public int victoryThreshold = 1000; 
+    public int victoryThreshold = 2500; 
     private bool gameEnded = false;
     public AudioSource musicSource;
     public AudioClip backgroundMusic;

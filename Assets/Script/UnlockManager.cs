@@ -23,7 +23,7 @@ public class UnlockManager : MonoBehaviour
     [Header("Seuils de déblocage")]
     public int tier2Threshold = 200;
     public int tier3Threshold = 400;
-    public int finalThreshold = 1000;
+    public int finalThreshold = 2500;
 
 
     public bool tier2Unlocked = false;
