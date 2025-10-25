@@ -23,13 +23,10 @@ public class UnlockManager : MonoBehaviour
     [Header("Seuils de déblocage")]
     public int tier2Threshold = 200;
     public int tier3Threshold = 400;
-    public int finalThreshold = 2500;
 
 
     public bool tier2Unlocked = false;
     public bool tier3Unlocked = false;
-    public bool gameCompleted = false;
-    public GameObject endScreen;
 
     void Start()
     {
@@ -76,13 +73,6 @@ public class UnlockManager : MonoBehaviour
             raiderSlotUpgrade.SetActive(true);
             hunterUI.SetActive(true);
             raiderUI.SetActive(true);
-        }
-
-
-        if (!gameCompleted && food >= finalThreshold && gold >= finalThreshold)
-        {
-            gameCompleted = true;
-            endScreen.SetActive(true);
         }
     }
 }

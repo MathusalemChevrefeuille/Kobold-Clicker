@@ -491,8 +491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6aaf678f88eb6449157fb951b6e92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: 1000
-  gold: 1000
+  food: 0
+  gold: 0
   baseFoodPerClick: 1
   foodPerClick: 1
   baseCoolDownClick: 1
@@ -13068,11 +13068,8 @@ MonoBehaviour:
   raiderUI: {fileID: 594611454}
   tier2Threshold: 200
   tier3Threshold: 400
-  finalThreshold: 2500
   tier2Unlocked: 0
   tier3Unlocked: 0
-  gameCompleted: 0
-  endScreen: {fileID: 0}
 --- !u!4 &1758198687
 Transform:
   m_ObjectHideFlags: 0
