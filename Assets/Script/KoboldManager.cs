@@ -49,7 +49,9 @@ public class KoboldManager : MonoBehaviour
     private float koboldCheckTimer = 0f;
 
     public int nextKoboldThreshold = 5; 
-    public float koboldThresholdMultiplier = 1.2f; 
+    public float koboldThresholdMultiplier = 1.3f;
+
+    public AudioClip koboldSpawnSound;
 
     public void UpdateTotalKobolds()
     {
@@ -63,6 +65,8 @@ public class KoboldManager : MonoBehaviour
     {
         idleKobolds += 1;
         UpdateTotalKobolds();
+        if (koboldSpawnSound != null)
+            AudioSource.PlayClipAtPoint(koboldSpawnSound, Vector3.zero, 0.05f);
     }
 
     public void ProduceResources() 

@@ -9,10 +9,12 @@ public class FoodClick : MonoBehaviour
     public float scaleFactor = 0.8f;
     public float resetDelay = 0.05f;
     private float lastClickTime = Mathf.NegativeInfinity;
+    private AudioSource audioSource;
 
     private void Start()
     {
         originalScale = rectTransform.localScale;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -21,6 +23,12 @@ public class FoodClick : MonoBehaviour
             Time.time - lastClickTime >= gameManager.CoolDownClick && upgradeMenuManager.isOpen == false)
         {
             lastClickTime = Time.time;
+            if (audioSource != null && audioSource.clip != null)
+            {
+                audioSource.pitch = Random.Range(0.9f, 1.1f); 
+                audioSource.PlayOneShot(audioSource.clip, 0.05f);
+            }
+
             gameManager.AddFoodClick();
 
             rectTransform.localScale = originalScale * scaleFactor;

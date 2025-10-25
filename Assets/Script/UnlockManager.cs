@@ -26,9 +26,10 @@ public class UnlockManager : MonoBehaviour
     public int finalThreshold = 1000;
 
 
-    private bool tier2Unlocked = false;
-    private bool tier3Unlocked = false;
-    private bool gameCompleted = false;
+    public bool tier2Unlocked = false;
+    public bool tier3Unlocked = false;
+    public bool gameCompleted = false;
+    public GameObject endScreen;
 
     void Start()
     {
@@ -81,6 +82,7 @@ public class UnlockManager : MonoBehaviour
         if (!gameCompleted && food >= finalThreshold && gold >= finalThreshold)
         {
             gameCompleted = true;
+            endScreen.SetActive(true);
         }
     }
 }

@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject floatingTextPrefab;
     public Canvas canvas;
+    public GameObject endScreen;
+    public int victoryThreshold = 1000; 
+    private bool gameEnded = false;
+    public AudioSource musicSource;
+    public AudioClip backgroundMusic;
 
     public void AddFoodClick()
     {
@@ -49,5 +54,32 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         uiManager.UpdateAllDisplays(food, gold, koboldManager);
+        if (musicSource != null && backgroundMusic != null)
+        {
+            musicSource.clip = backgroundMusic;
+            musicSource.loop = true;
+            musicSource.Play();
+        }
+    }
+
+    private void CheckVictory()
+    {
+        if (!gameEnded && food >= victoryThreshold && gold >= victoryThreshold)
+        {
+            gameEnded = true;
+            ShowEndScreen();
+        }
+    }
+
+    private void ShowEndScreen()
+    {
+        if (endScreen != null)
+        {
+            endScreen.SetActive(true);
+        }
+    }
+    public void Update()
+    {
+        CheckVictory();
     }
 }
