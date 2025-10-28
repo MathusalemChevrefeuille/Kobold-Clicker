@@ -504,7 +504,7 @@ MonoBehaviour:
   endScreen: {fileID: 393836743}
   victoryThreshold: 2500
   musicSource: {fileID: 857760530}
-  backgroundMusic: {fileID: 8300000, guid: dd3a56fcc105b8f499b816c675308c90, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 44842d599b976234f8a8fcda490257f6, type: 3}
 --- !u!1 &38323186
 GameObject:
   m_ObjectHideFlags: 0
@@ -6584,7 +6584,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: dd3a56fcc105b8f499b816c675308c90, type: 3}
+  m_Resource: {fileID: 8300000, guid: 44842d599b976234f8a8fcda490257f6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.01
   m_Pitch: 1
