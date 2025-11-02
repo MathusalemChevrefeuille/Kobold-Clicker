@@ -73,21 +73,6 @@ public class SpriteManager : MonoBehaviour
     }
 
 
-    void SetActiveArray(GameObject[] arr, bool state)
-    {
-        if (arr == null) return; 
-        for (int i = 0; i < arr.Length; i++)
-        {
-            if (arr[i] != null) 
-                arr[i].SetActive(state); 
-        }
-    }
-
-    
-    void SafeSetActive(GameObject go, bool state)
-    {
-        if (go != null) go.SetActive(state);
-    }
 
     
     IEnumerator FadeInArray(GameObject[] arr)

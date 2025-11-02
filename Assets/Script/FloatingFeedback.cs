@@ -3,8 +3,8 @@ using TMPro;
 
 public class FloatingFeedback : MonoBehaviour
 {
-    public float floatSpeed = 50f;     // Vitesse du mouvement vers le haut
-    public float lifetime = 1.5f;      // Temps avant destruction
+    public float floatSpeed = 50f;
+    public float lifetime = 1.5f;
     private TextMeshProUGUI textMesh;
 
     void Awake()
@@ -16,7 +16,7 @@ public class FloatingFeedback : MonoBehaviour
     {
         textMesh.text = message;
         textMesh.color = color;
-        Destroy(gameObject, lifetime); // se détruit tout seul
+        Destroy(gameObject, lifetime);
     }
 
     void Update()

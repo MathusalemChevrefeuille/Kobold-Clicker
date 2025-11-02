@@ -20,10 +20,8 @@ public class FloatingText : MonoBehaviour
          textMesh.text = "+" + amount; 
          textMesh.color = color; 
 
-         // Fonction exponentielle douce 
          float size = baseFontSize * Mathf.Pow(2.0f, amount);    
 
-         // On limite pour éviter un texte qui explose
          textMesh.fontSize = Mathf.Clamp(size, baseFontSize, maxFontSize);
         
 
