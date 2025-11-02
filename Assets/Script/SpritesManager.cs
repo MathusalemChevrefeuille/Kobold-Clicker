@@ -106,7 +106,7 @@ public class SpriteManager : MonoBehaviour
         {
             timer += Time.deltaTime; 
             group.alpha = Mathf.Lerp(0f, 1f, timer / duration); 
-            yield return null;
+            yield return null; // important de yield return null pour attendre la prochaine frame
         }
 
         group.alpha = 1f; 
