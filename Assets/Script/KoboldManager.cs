@@ -22,7 +22,7 @@ public class KoboldManager : MonoBehaviour
     public int GoldperScavenger = 5;
     public int FoodperHunter = 5;
     public int FoodClickperHunter = 5;
-    public int GoldperRaider = 5;
+    public int GoldperRaider = 10;
 
 
     public int costForagerFood = 0;
@@ -30,7 +30,7 @@ public class KoboldManager : MonoBehaviour
 
     public int costMinerFood = 20;
     public int costMinerGold = 0;
-
+    
     public int costShamanFood = 20;
     public int costShamanGold = 20;
 
