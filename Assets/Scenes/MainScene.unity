@@ -6062,9 +6062,9 @@ MonoBehaviour:
   GoldPerMiner: 1
   shamanClickReducer: 0.05
   GoldperScavenger: 5
-  FoodperHunter: 5
+  FoodperHunter: 10
   FoodClickperHunter: 5
-  GoldperRaider: 5
+  GoldperRaider: 10
   costForagerFood: 0
   costForagerGold: 0
   costMinerFood: 20
