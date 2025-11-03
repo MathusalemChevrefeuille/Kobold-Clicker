@@ -20,7 +20,7 @@ public class KoboldManager : MonoBehaviour
     public int GoldPerMiner = 1;
     public float shamanClickReducer = 0.05f;
     public int GoldperScavenger = 5;
-    public int FoodperHunter = 5;
+    public int FoodperHunter = 10;
     public int FoodClickperHunter = 5;
     public int GoldperRaider = 10;
 
